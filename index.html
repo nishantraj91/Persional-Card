@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Card — Nishant Raj</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <article class="card" role="region" aria-label="Personal profile card">
+      <div class="card-content">
+        <div class="top">
+          <figure class="avatar" aria-hidden="true">
+            <!-- Replace src with your photo file name (e.g. profile.jpg) -->
+            <img src="image.jpg" alt="Profile photo">
+          </figure>
+
+          <div class="who">
+            <h1 class="name">Nishant raj</h1>
+            <div class="role">Fullstack Developer</div>
+            <div class="small">Bhopal, India • Open to opportunities</div>
+          </div>
+        </div>
+
+        <p class="tagline">You’ve just identified the perfect candidate for your team!😜😜 🚀</p>
+
+        <nav class="links" aria-label="Social links">
+          <!-- Replace href values with your real links -->
+          <a class="link" href="https://nishantraj91.github.io/Weather-Explorer/" target="_blank" rel="noopener noreferrer">
+            <span class="icon">🌐</span>
+            Website
+          </a>
+
+          <a class="link" href="https://github.com/nishantraj91" target="_blank" rel="noopener noreferrer">
+            <span class="icon">💻</span>
+            GitHub
+          </a>
+
+          <a class="link" href="https://www.linkedin.com/in/nishantraj91/" target="_blank" rel="noopener noreferrer">
+            <span class="icon">🔗</span>
+            LinkedIn
+          </a>
+
+          <a class="link" href="" target="_blank" rel="noopener noreferrer">
+            <span class="icon">🎨</span>
+            Portfolio
+          </a>
+
+          <a class="link" href="mailto:niushantrajkhairi@gmail.com" target="_blank" rel="noopener noreferrer">
+            <span class="icon">✉️</span>
+            Email
+          </a>
+
+          <a class="link" href="Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="icon">📄</span>
+            View my CV
+          </a>
+        </nav>
+
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <a class="cv" href="Resume.pdf" download>Download CV</a>
+          <div style="color:var(--muted);font-size:0.85rem">Last updated: Sep 8, 2025</div>
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+  <script>
+    // Small JS: if image missing, use a placeholder color circle
+    document.addEventListener('DOMContentLoaded', function(){
+      const img = document.querySelector('.avatar img');
+      img.addEventListener('error', ()=>{
+        img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="100%" height="100%" fill="%230f0f10"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23ffffff" font-size="20">Your Photo</text></svg>';
+      });
+    });
+  </script>
+</body>
+</html>
